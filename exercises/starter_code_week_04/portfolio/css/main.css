@@ -1,0 +1,13 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #FAC7AC;
+	color: #D53842;
+	text-align: center;
+}
+
+
+a {
+	color: #006A99;
+	text-decoration: none;
+	padding: 20px;
+}
