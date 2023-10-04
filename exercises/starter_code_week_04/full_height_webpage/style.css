@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background-color: papayawhip;
+  }
+  
+  main, header, footer {
+    padding: 20px;
+    border: 1px solid #000000;
+    color: #141414;
+  }
+  
+  header,
+  footer {
+    height: 20vh;
+  }
+  
+  main {
+    height: 60vh;
+  }
+  
