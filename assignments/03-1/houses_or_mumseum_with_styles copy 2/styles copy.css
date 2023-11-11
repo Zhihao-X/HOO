@@ -1,0 +1,51 @@
+.neon{
+    text-decoration: none;
+    color: #d00000;
+    font-weight: bold;
+    font-size: larger;
+    font-family: Arial, sans-serif
+}
+.two{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial, sans-serif
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 400px;
+    background-color: #000f84;
+ 
+}
+
+
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+.pic {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+img{
+    display: block; 
+    margin: 0 auto; 
+    width: 50%;
+    height: auto;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px 50px;
+    align-items: start;
+    }
