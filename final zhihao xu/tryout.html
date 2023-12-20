@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Circles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="tag-container">
+        <div class="tag" onclick="filterByTag('tag1')">Tag 1</div>
+        <div class="tag" onclick="filterByTag('tag2')">Tag 2</div>
+        <div class="tag" onclick="filterByTag('tag3')">Tag 3</div>
+        <div id="clear-button" onclick="clearFilter()">Clear</div>
+    </div>
+
+    
+        <div class="grid">
+            <div class="image-container">
+                <img src="./image/1.png" data-tags="tag1" />
+                <div class="text-overlay">Text for Image 1</div>
+            </div>
+            <div class="image-container">
+                <img src="./image/2.png" data-tags="tag2" />
+                <div class="text-overlay">Text for Image 2</div>
+            </div>
+            <div class="image-container">
+                <img src="./image/3.jpg" data-tags="tag1 tag2" />
+                <div class="text-overlay">Text for Image 3</div>
+            </div>
+            <img src="./image/4.jpeg" data-tags="tag3" />
+            <img src="./image/5.jpeg" data-tags="tag1 tag3" />
+            <img src="./image/6.jpg" data-tags="tag2 tag3" />
+            <img src="./image/7.jpg" data-tags="tag1" />
+            <img src="./image/8.jpg" data-tags="tag2" />
+            <img src="./image/9.jpg" data-tags="tag3" />
+            <img src="./image/10.jpg" data-tags="tag1 tag2 tag3" />
+            <img src="./image/11.jpg" data-tags="tag1 tag2" />
+            <img src="./image/12.jpg" data-tags="tag2 tag3" />
+            <img src="./image/13.jpg" data-tags="tag1 tag3" />
+            <img src="./image/14.jpg" data-tags="tag1" />
+            <img src="./image/15.jpg" data-tags="tag2" />
+            <img src="./image/16.jpg" data-tags="tag3" />
+            <img src="./image/17.jpg" data-tags="tag1 tag2 tag3" />
+            <img src="./image/26.jpg" data-tags="tag1 tag2 tag3" />
+            <img src="./image/31.jpg" data-tags="tag1 tag2 tag3" />
+            <img src="./image/38.jpg" data-tags="tag1 tag2 tag3" />
+        </div>
+    
+    <script>
+        function filterByTag(tag) {
+            const images = document.querySelectorAll('.image-container > img');
+
+            images.forEach(image => {
+                const tags = image.getAttribute('data-tags').split(' ');
+                if (tags.includes(tag)) {
+                    growImage(image);
+                } else {
+                    shrinkImage(image);
+                }
+            });
+        }
+
+        function clearFilter() {
+            const images = document.querySelectorAll('.image-container > img');
+            images.forEach(image => samesize(image));
+        }
+
+        function growImage(image) {
+            image.style.width = '800px';
+        }
+
+        function shrinkImage(image) {
+            image.style.width = '100px';
+        }
+
+        function samesize(image) {
+            image.style.width = '400px';
+        }
+    </script>
+
+</body>
+</html>
